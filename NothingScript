@@ -1,0 +1,17 @@
+local NothingScript = {}
+NothingScript.__index = NothingScript
+
+function NothingScript.new()
+    local self = setmetatable({}, NothingScript)
+    return self
+end
+
+function NothingScript:Update()
+end
+
+local function run()
+    local instance = NothingScript.new()
+    instance:Update()
+end
+
+run()
